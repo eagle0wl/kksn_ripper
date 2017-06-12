@@ -13,5 +13,5 @@ usage:
 example:  
 `> python kksn_ripper.py "KKSN DX.exe" dx.nes`  
 
-キラキラスターナイトDXパーフェクトブックを買った＆ROMイメージ抽出した
+キラキラスターナイトDXパーフェクトブックを買った＆ROMイメージ抽出した  
 http://eagle0wl.hatenadiary.jp/entry/2017/05/01/045856
