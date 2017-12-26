@@ -15,4 +15,6 @@ example:
 `> python kksn_ripper.py "KKSN DX.exe" dx.nes`  
 
 キラキラスターナイトDXパーフェクトブックを買った＆ROMイメージ抽出した  
-http://eagle0wl.hatenadiary.jp/entry/2017/05/01/045856
+http://eagle0wl.hatenadiary.jp/entry/2017/05/01/045856  
+8BIT MUSIC POWER ファイナル&アンコールを買った&ROMイメージ抽出した  
+http://eagle0wl.hatenadiary.jp/entry/2017/12/25/231543  
