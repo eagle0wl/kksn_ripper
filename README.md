@@ -1,4 +1,4 @@
-# kksn_ripper
+# kksn_ripper ver0.2
 
 Copyright (c) 2017 eagle0wl All rights Reserved.  
 
@@ -7,7 +7,8 @@ This script is released under the MIT License.
 
 usage:  
 `> python kksn_ripper.py [.exe] [.nes]`  
-`[.exe] is "KKSN DX.exe", "KKSN AC.exe" or "KKSN GOLD.exe".`  
+`[.exe] is "KKSN DX.exe", "KKSN AC.exe", "KKSN GOLD.exe",`  
+`          "8BIT MUSIC POWER FINAL.exe" and "8BIT MUSIC POWER ENCORE.exe".`  
 `[.nes] is output file name.`  
 
 example:  

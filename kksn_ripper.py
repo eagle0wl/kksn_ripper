@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-kksn_ripper ver0.1
+kksn_ripper ver0.2
 
 Copyright (c) 2017 eagle0wl All rights Reserved.
 
@@ -16,11 +16,36 @@ http://www.mysys.org/eagle0wl/
 import sys, md5
 
 rip_status_table = []
-rip_status_table.append({'md5_hash': u'5aed41fe291d0d1b21bbf48e2bcb77f9', 'offset': 0x00069094, 'size': 0x00039BE4}) # KKSN DX.exe
-rip_status_table.append({'md5_hash': u'1d6f9515a10eb20ed719e9c7fcad9635', 'offset': 0x00069094, 'size': 0x00039FA4}) # KKSN AC.exe
-rip_status_table.append({'md5_hash': u'b5cb27b56c23fdde3cd0b0d793024ae5', 'offset': 0x000690AC, 'size': 0x0003A2F6}) # KKSN GOLD.exe
-
-commoniNESHeader = '4E45531A102042000000000000000000'.decode('hex')
+rip_status_table.append({
+	'md5_hash'  : u'5aed41fe291d0d1b21bbf48e2bcb77f9',
+	'offset'    : 0x00069094,
+	'size'      : 0x00039BE4,
+	'iNESHeader': '4E45531A102042000000000000000000'.decode('hex'),
+	}) # KKSN DX.exe
+rip_status_table.append({
+	'md5_hash'  : u'1d6f9515a10eb20ed719e9c7fcad9635',
+	'offset'    : 0x00069094,
+	'size'      : 0x00039FA4,
+	'iNESHeader': '4E45531A102042000000000000000000'.decode('hex'),
+	}) # KKSN AC.exe
+rip_status_table.append({
+	'md5_hash'  : u'b5cb27b56c23fdde3cd0b0d793024ae5',
+	'offset'    : 0x000690AC,
+	'size'      : 0x0003A2F6,
+	'iNESHeader': '4E45531A102042000000000000000000'.decode('hex'),
+	}) # KKSN GOLD.exe
+rip_status_table.append({
+	'md5_hash'  : u'031b7afa1fcc8ec0b2469ff88e043ef5',
+	'offset'    : 0x00069084,
+	'size'      : 0x00046BDE,
+	'iNESHeader': '4E45531A202042000000000000000000'.decode('hex'),
+	}) # 8BIT MUSIC POWER FINAL.exe
+rip_status_table.append({
+	'md5_hash'  : u'e16444892866a35f2c75fee2ac541991',
+	'offset'    : 0x00069084,
+	'size'      : 0x0002AD5F,
+	'iNESHeader': '4E45531A102042000000000000000000'.decode('hex'),
+	}) # 8BIT MUSIC POWER ENCORE.exe
 
 
 def get_rip_status(md5_hash):
@@ -93,7 +118,8 @@ def usage():
 	
 	print u'usage:'
 	print u'> python ' + __file__ + u' [.exe] [.nes]'
-	print u'[.exe] is "KKSN DX.exe", "KKSN AC.exe" or "KKSN GOLD.exe".'
+	print u'[.exe] is "KKSN DX.exe", "KKSN AC.exe", "KKSN GOLD.exe",'
+	print u'          "8BIT MUSIC POWER FINAL.exe" and "8BIT MUSIC POWER ENCORE.exe".'
 	print u'[.nes] is output file name.'
 	print u''
 	print u'example:'
@@ -135,7 +161,7 @@ def main():
 	nessize = lzss_variant_decompress(compressdata, nesdata)
 	
 	f = open(nesfilename, 'wb')
-	f.write(commoniNESHeader)
+	f.write(rip_status['iNESHeader'])
 	f.write(nesdata[:nessize])
 	f.close()
 	
