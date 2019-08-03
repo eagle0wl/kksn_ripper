@@ -2,7 +2,7 @@
 
 Copyright (c) 2017 eagle0wl All rights Reserved.  
 
-python 2.7.x (not work on 3.7.x) 
+python 2.7.x (***not work on 3.7.x***) 
 This script is released under the MIT License.  
 
 usage:  
